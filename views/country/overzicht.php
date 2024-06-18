@@ -28,8 +28,15 @@
                     echo "<td>" . $country->Name . "</td>";
                     echo "<td><a href='http://localhost:8080/city/view?id=" . $country->hoofdstad->ID . "'>" . $country->hoofdstad->Name . "</a></td>"; 
                     echo "<td>" . number_format($country->SurfaceArea, 0, '.', ' ') . "</td>";
-                    echo "<td>" . $country->countrylanguages[0]->Language . "</td>";
-                    echo "</tr>";
+                    //echo "<td>" . $country->countrylanguages[0]->Language . "</td>";
+                    ?>
+                    <td>
+                    <?php foreach ($country->countrylanguages as $taal): ?>
+                        <?= $taal->Language ?> <br/>
+                    <?php endforeach; ?>
+                    </td>
+                    <?php
+                    echo "</tr>"; 
                 } // Toby Emeboh
             ?>
     </table>

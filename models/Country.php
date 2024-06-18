@@ -99,4 +99,7 @@ class Country extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Countrylanguage::class, ['CountryCode' => 'Code']);
     }
+    public function getHoofdstad() {
+	return $this->hasOne(City::className(), ['ID' => 'Capital']);
+}
 }

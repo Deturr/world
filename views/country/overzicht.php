@@ -18,11 +18,13 @@
 <body>
     <table border="2px">
         <th>Naam</th>
+        <th> Hoofdstad </th>
         <th> Oppervlakte </th>
             <?php
                 foreach ($countries as $country) {
                     echo "<tr>";
                     echo "<td>" . $country->Name . "</td>";
+                    echo "<td>" . $country->hoofdstad->Name . "</td>";
                     echo "<td>" . number_format($country->SurfaceArea, 0, '.', ' ') . "</td>";
                     echo "</tr>";
                 }

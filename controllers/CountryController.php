@@ -118,9 +118,20 @@ class CountryController extends Controller
         return $this->redirect(['index']);
     }
 
-    public function actionOverzicht() {
-        ?> <h1> Oops </h1> <?php
-    }
+    public function actionOverzicht()
+{
+    // Toby Emeboh
+    // Dit is de query, dit is te vergelijken met select * from Country
+    $countries = Country::find()->all();
+  
+   // De code hieronder genereert de html, dit noemt men de view binnen MVC (model view controller).
+    // Zoals je kunt zien geven we de $countries array door aan de "overzicht" view. 
+    // In de overzicht View kunnen we nu $countries gebruiken.
+
+    return $this->render('overzicht', [
+        'countries' => $countries,
+    ]);
+}
 
     /**
      * Finds the Country model based on its primary key value.

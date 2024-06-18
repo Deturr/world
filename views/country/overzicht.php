@@ -20,12 +20,15 @@
         <th>Naam</th>
         <th> Hoofdstad </th>
         <th> Oppervlakte </th>
+        <th> Taal </th>
             <?php
                 foreach ($countries as $country) {
                     echo "<tr>";
+                    //echo "<td>" . $country->countryLanguages ."</td>";
                     echo "<td>" . $country->Name . "</td>";
                     echo "<td><a href='http://localhost:8080/city/view?id=" . $country->hoofdstad->ID . "'>" . $country->hoofdstad->Name . "</a></td>"; 
                     echo "<td>" . number_format($country->SurfaceArea, 0, '.', ' ') . "</td>";
+                    echo "<td>" . $country->countrylanguages[0]->Language . "</td>";
                     echo "</tr>";
                 } // Toby Emeboh
             ?>

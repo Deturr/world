@@ -102,4 +102,5 @@ class Country extends \yii\db\ActiveRecord
     public function getHoofdstad() {
 	return $this->hasOne(City::className(), ['ID' => 'Capital']);
 }
+    
 }

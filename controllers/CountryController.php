@@ -136,6 +136,7 @@ class CountryController extends Controller
 
 public function actionOverzichtEurope() {
     $countries = Country::find()
+        ->select("*")
         ->with('hoofdstad')
         ->where(['Continent' => 'Europe'])
         ->orderBy(['SurfaceArea' => SORT_DESC])

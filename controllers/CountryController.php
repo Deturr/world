@@ -132,6 +132,19 @@ class CountryController extends Controller
         'countries' => $countries,
     ]);
 }
+// CountryController.php
+
+public function actionOverzichtEurope() {
+    $countries = Country::find()
+        ->where(['Continent' => 'Europe'])
+        ->orderBy(['SurfaceArea' => SORT_DESC])
+        ->all();
+
+    return $this->render('overzicht', [
+        'countries' => $countries,
+    ]);
+}
+
 
     /**
      * Finds the Country model based on its primary key value.

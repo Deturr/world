@@ -30,10 +30,16 @@
                     echo "<td>" . number_format($country->SurfaceArea, 0, '.', ' ') . "</td>";
                     //echo "<td>" . $country->countrylanguages[0]->Language . "</td>";
                     ?>
-                    <td>
-                    <?php foreach ($country->countrylanguages as $taal): ?>
-                        <?= $taal->Language ?> (<?= $taal->Percentage ?>%)<br/>
-                    <?php endforeach; ?>
+                    <td> <?php
+                    $languages = $country->countrylanguages;
+                            
+                            usort($languages, function($lager, $hoger) {
+                                return $hoger->Percentage - $lager->Percentage;
+                            }); // Toby Emeboh
+
+                            foreach ($languages as $taal): ?>
+                                <?= $taal->Language ?> (<?= $taal->Percentage ?>%)<br/>
+                            <?php endforeach; ?>
                     </td>
                     <?php
                     echo "</tr>"; 

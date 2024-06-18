@@ -24,10 +24,10 @@
                 foreach ($countries as $country) {
                     echo "<tr>";
                     echo "<td>" . $country->Name . "</td>";
-                    echo "<td>" . $country->hoofdstad->Name . "</td>";
+                    echo "<td><a href='http://localhost:8080/city/view?id=" . $country->hoofdstad->ID . "'>" . $country->hoofdstad->Name . "</a></td>"; 
                     echo "<td>" . number_format($country->SurfaceArea, 0, '.', ' ') . "</td>";
                     echo "</tr>";
-                }
+                } // Toby Emeboh
             ?>
     </table>
 </body>

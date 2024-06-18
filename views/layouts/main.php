@@ -58,6 +58,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     ['label' => 'Africa', 'url' => ['/country/index', 'CountrySearch[Continent]' => 'Africa'] ],
                     ['label' => 'Oceania', 'url' => ['/country/index', 'CountrySearch[Continent]' => 'Oceania'] ],
                     ['label' => 'Antarctica', 'url' => ['/country/index', 'CountrySearch[Continent]' => 'Antarctica'] ],
+                    ['label' => 'Overzicht', 'url' => ['/country/overzicht', ''] ],
                 ],
             ],
             ['label' => "City",

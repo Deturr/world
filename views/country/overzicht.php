@@ -32,7 +32,7 @@
                     ?>
                     <td>
                     <?php foreach ($country->countrylanguages as $taal): ?>
-                        <?= $taal->Language ?> <br/>
+                        <?= $taal->Language ?> (<?= $taal->Percentage ?>%)<br/>
                     <?php endforeach; ?>
                     </td>
                     <?php

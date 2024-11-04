@@ -10,7 +10,7 @@
             width: 50%;
         }
         th, td {
-            text-align: left;
+            vertical-align:top;
             padding: 8px;
         }
     </style>
